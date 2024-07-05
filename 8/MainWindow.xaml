@@ -1,0 +1,48 @@
+﻿<Window x:Class="_8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="22*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF44904C"/>
+                <GradientStop Color="#FE448F4C" Offset="1"/>
+                <GradientStop Color="#FF445D90" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="211" Margin="511,128,0,0" VerticalAlignment="Top" Width="173" Source="/pngwing.com (1).png" Grid.Column="2"/>
+        <Label x:Name="label" Content="Спортивный комплекс &quot;Горняк&quot;" HorizontalAlignment="Left" Margin="198,17,0,0" VerticalAlignment="Top" Foreground="#FFB5D012" FontFamily="Arial Black" Grid.Column="2" Height="24" Width="227"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="155" Margin="10,100,0,0" VerticalAlignment="Top" Width="142" d:ItemsSource="{d:SampleData ItemCount=5}" Background="{x:Null}" Foreground="#FFB5D012" Grid.ColumnSpan="3"/>
+        <Label x:Name="label1" Content="О компании: Спортивный комплекс – это соответствующим образом оборудованное сооружение крытого &#xD;&#xA;или открытого типа, предоставляющее возможности для проведения спортивных соревнований,&#xD;&#xA;учебно-тренировочного процесса,занятий физической культурой и спортивного отдыха по различным видам&#xD;&#xA;спорта. " HorizontalAlignment="Left" Margin="10,349,0,0" VerticalAlignment="Top" Width="770" Height="75" Grid.ColumnSpan="3" Foreground="#FF2D3F6B" FontFamily="Arial Black"/>
+        <Menu Height="38" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="1,1,13,0">
+            <Menu.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="360.323"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Menu.RenderTransform>
+            <MenuItem Header="File">
+                <MenuItem Header="New Project" ></MenuItem>
+                <MenuItem Header="Open Project" >
+                    <MenuItem Header="WinForms"></MenuItem>
+                    <MenuItem Header="WPF" ></MenuItem>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="Exit" ></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Edit" ></MenuItem>
+            <MenuItem Header="View" ></MenuItem>
+        </Menu>
+    </Grid>
+</Window>
